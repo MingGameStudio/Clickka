@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 0a44e1b0f221240248d1995c826b051c
+guid: 29599dc4a519849df91a4a6191222fee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3763752930381237044
-    second: New Piskel (2)_0
+      213: 5659879763037811648
+    second: UpgradeButtons_0
+  - first:
+      213: 9070847139988628098
+    second: UpgradeButtons_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +103,95 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ButtonIcon_0
+      name: UpgradeButtons_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c37a4b38aeeb8e40800000000000000
+      internalID: 5659879763037811648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeButtons_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282e3e61a6f12ed70800000000000000
+      internalID: 9070847139988628098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeButtons_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8c9db05d8454ad99d34710ccdeb8ca
+      internalID: -883242743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeButtons_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e80fe2d2397b4e0c8b1e2b336d927f8
+      internalID: 1311146423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpgradeButtons_4
       rect:
         serializedVersion: 2
         x: 0
@@ -115,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ecefd36da8ab471a8818e6e3d2d33ba
-      internalID: -1461155271
+      spriteID: 5afdafbae86294460bb833680c6b57eb
+      internalID: 318895159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ButtonIcon_1
+      name: UpgradeButtons_5
       rect:
         serializedVersion: 2
         x: 0
@@ -137,8 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28431e3b012cb4efc863e30cce37feb5
-      internalID: -1683723046
+      spriteID: ce0536262c6ef4d379147e854f2224f0
+      internalID: -171910519
       vertices: []
       indices: 
       edges: []
@@ -147,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c646e1ed9b17f416bbf854ca6ddcead2
+    spriteID: 5ab401dcce11b40e086756dcbb31e898
     internalID: 0
     vertices: []
     indices: 
@@ -157,10 +248,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":6.0},"gridSpriteSize":{"x":64.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ButtonIcon_0: -1461155271
-      ButtonIcon_1: -1683723046
+      UpgradeButtons_0: 5659879763037811648
+      UpgradeButtons_1: 9070847139988628098
+      UpgradeButtons_2: -883242743
+      UpgradeButtons_3: 1311146423
+      UpgradeButtons_4: 318895159
+      UpgradeButtons_5: -171910519
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

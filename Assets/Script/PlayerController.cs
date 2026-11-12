@@ -25,8 +25,9 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         _unlockedJump = false;
-        _unlockedLeftMovement = false;
-        _unlockedRightMovement = false;
+        _unlockedLeftMovement = true;
+        _unlockedRightMovement = true;
+        // FOR NOW ZEHAAHAHAHHA, ignore my blackbeard ahh laugh
     }
     void Update()
     {
@@ -35,7 +36,8 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(0,0);
+        float previousYVelocity = rb.linearVelocity.y;
+        rb.linearVelocity = new Vector2(0,previousYVelocity);
         // this basically resets the velocity to 0, so the player doesn't keep moving when no input is given.
         // it keeps shit snappy (:
         if (_unlockedLeftMovement == true)
