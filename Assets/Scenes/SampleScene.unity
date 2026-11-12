@@ -5283,7 +5283,7 @@ GameObject:
   - component: {fileID: 224178444}
   - component: {fileID: 224178443}
   m_Layer: 0
-  m_Name: Platform
+  m_Name: Platform Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5755,7 +5755,7 @@ GameObject:
   - component: {fileID: 362309802}
   - component: {fileID: 362309803}
   - component: {fileID: 362309804}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5771,7 +5771,7 @@ Transform:
   m_GameObject: {fileID: 362309801}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.5, z: 0}
+  m_LocalPosition: {x: 0, y: -3.6, z: 0}
   m_LocalScale: {x: 30, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6139,10 +6139,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.02093719
+    y: 0.014563107
+    width: 0.95712864
+    height: 0.97087383
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -6172,7 +6172,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6542,9 +6542,10 @@ MonoBehaviour:
   moneyManager: {fileID: 1875274895}
   IncomeAmplifierCostText: {fileID: 1171955692}
   IncomeAmplifierLevelText: {fileID: 35374370}
-  IncomeAmplifierPrice: 20
-  PriceMultiplier: 5
-  IncomeAmplifierMultiplier: 2
+  AmplifierPrice: 20
+  InitAmplifierPrice: 0
+  CostMultiplier: 2
+  IncomeAmplifierMultiplier: 1.5
 --- !u!1 &891021296
 GameObject:
   m_ObjectHideFlags: 0
@@ -6704,6 +6705,7 @@ GameObject:
   - component: {fileID: 1170576004}
   - component: {fileID: 1170576003}
   - component: {fileID: 1170576005}
+  - component: {fileID: 1170576006}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6812,7 +6814,25 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &1170576006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170576002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d11dc92890d74bbfa881ea2905c0b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  _unlockedJump: 0
+  _unlockedLeftMovement: 0
+  _unlockedRightMovement: 1
+  JumpStrength: 1
+  LeftMovementAmount: 1
+  RightMovementAmount: 1
 --- !u!1 &1171955690
 GameObject:
   m_ObjectHideFlags: 0
@@ -8113,5 +8133,5 @@ SceneRoots:
   - {fileID: 1518368549}
   - {fileID: 2058799239}
   - {fileID: 129804709}
-  - {fileID: 224178444}
   - {fileID: 362309802}
+  - {fileID: 224178444}

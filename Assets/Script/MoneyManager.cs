@@ -15,5 +15,6 @@ public class MoneyManager : MonoBehaviour
     {
         money += amount;
         moneyText.text = "$ " + money;
+        money = Mathf.Round(money * 100)/100;;
     }
 }

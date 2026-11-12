@@ -12,9 +12,10 @@ public class AmplifierManager : MonoBehaviour
     // the UI text element that displays the current cost of the income amplifier.
 
     [Header("Amplifier Settings")]
-    [SerializeField] float IncomeAmplifierPrice;
-    [SerializeField] float PriceMultiplier = 1.5f;
-    [SerializeField] float IncomeAmplifierMultiplier = 2.5f;
+    [SerializeField] float AmplifierPrice;
+    [SerializeField] float InitAmplifierPrice;
+    [SerializeField] float CostMultiplier = 2f;
+    [SerializeField] float IncomeAmplifierMultiplier = 1.1f;
     private float incomeAmplifierLevel = 1;
     private float maxIncomeAmplifierLevel = 10;
 
@@ -22,7 +23,8 @@ public class AmplifierManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        IncomeAmplifierCostText.text = "Cost: $" + IncomeAmplifierPrice;
+        InitAmplifierPrice = AmplifierPrice;
+        IncomeAmplifierCostText.text = "Cost: $" + AmplifierPrice;
         // the previous line sets the text of the AmplifierText UI element to display 
         // the price of the amplifier, prefixed with a dollar sign.
 
@@ -38,17 +40,17 @@ public class AmplifierManager : MonoBehaviour
             return;
             
         }
-        else if (moneyManager.money >= IncomeAmplifierPrice)
+        else if (moneyManager.money >= AmplifierPrice)
         {
-            moneyManager.IncreaseMoney(-IncomeAmplifierPrice);
+            moneyManager.IncreaseMoney(-AmplifierPrice);
             // this line deducts the cost of the amplifier from the player's current money 
             // by calling the IncreaseMoney method with a negative value.
-            IncomeAmplifierPrice *= PriceMultiplier;
+            AmplifierPrice = Mathf.Pow(CostMultiplier, incomeAmplifierLevel) * InitAmplifierPrice;
             // this line increases the price of the amplifier for the 
             // next purchase by multiplying the current price by the priceMultiplier.
-            IncomeAmplifierPrice = Mathf.Round(IncomeAmplifierPrice * 100)/100;
+            AmplifierPrice = Mathf.Round(AmplifierPrice * 100)/100;
             // this line rounds the new price to two decimal places.
-            IncomeAmplifierCostText.text = "Cost: $" + IncomeAmplifierPrice;
+            IncomeAmplifierCostText.text = "Cost: $" + AmplifierPrice;
             // this line updates the UI text to display the new cost of the amplifier.
             button.moneyPerClickMultiplier *= IncomeAmplifierMultiplier;
             incomeAmplifierLevel++;
