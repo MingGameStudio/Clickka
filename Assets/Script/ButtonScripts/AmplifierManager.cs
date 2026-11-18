@@ -13,7 +13,9 @@ public class AmplifierManager : MonoBehaviour
 
     [Header("Amplifier Settings")]
     [SerializeField] float AmplifierPrice;
+    // the current price of the amplifier, which will be updated after each purchase.
     [SerializeField] float InitAmplifierPrice;
+    // the initial price of the amplifier, which will be used to calculate the new price after each purchase.
     [SerializeField] float CostMultiplier = 2f;
     [SerializeField] float IncomeAmplifierMultiplier = 1.1f;
     private float incomeAmplifierLevel = 1;

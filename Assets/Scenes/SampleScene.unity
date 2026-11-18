@@ -6928,10 +6928,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.06206089
-    y: -0.013722127
-    width: 1.1241218
-    height: 1.0291595
+    x: 0.04887218
+    y: 0.014563107
+    width: 0.90225565
+    height: 0.97087383
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -7541,7 +7541,7 @@ GameObject:
   - component: {fileID: 905413374}
   - component: {fileID: 905413373}
   m_Layer: 5
-  m_Name: Level
+  m_Name: Status
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9370,6 +9370,7 @@ GameObject:
   - component: {fileID: 1534286160}
   - component: {fileID: 1534286159}
   - component: {fileID: 1534286158}
+  - component: {fileID: 1534286161}
   m_Layer: 5
   m_Name: Unlock CAMERAFOLLOW Button
   m_TagString: Untagged
@@ -9445,9 +9446,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AmplifierManager, Assembly-CSharp
-        m_MethodName: BuyIncomeAmplifier
+      - m_Target: {fileID: 1534286161}
+        m_TargetAssemblyTypeName: CameraFollowButtonScript, Assembly-CSharp
+        m_MethodName: BuyCameraFollow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9477,7 +9478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: beac2f9aeeb934761860d864d65eb6f2, type: 3}
+  m_Sprite: {fileID: -171910519, guid: 29599dc4a519849df91a4a6191222fee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9495,6 +9496,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534286156}
   m_CullTransparentMesh: 1
+--- !u!114 &1534286161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534286156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86250da98984945a48a978825d8bb1d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFollowButtonScript
+  button: {fileID: 891021301}
+  moneyManager: {fileID: 1875274895}
+  camera: {fileID: 519420035}
+  CameraFollowCostText: {fileID: 482196425}
+  HasUnlockedCameraFollowText: {fileID: 905413373}
+  Cost: 10
 --- !u!1 &1536075569
 GameObject:
   m_ObjectHideFlags: 0
@@ -10502,7 +10521,7 @@ GameObject:
   - component: {fileID: 2027157949}
   - component: {fileID: 2027157948}
   m_Layer: 5
-  m_Name: Image
+  m_Name: GrayThing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

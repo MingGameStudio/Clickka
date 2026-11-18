@@ -3,7 +3,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform playerTransform;
-    [SerializeField] private bool playerCanFollow;
+    [SerializeField] public bool playerCanFollow;
     Camera componentCamera;
 
     void Awake()
@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
     }
     void Start()
     {
-        playerCanFollow = true;
+        playerCanFollow = false;
         // FOR NOW HAHAHAHAHAHHAHAHAHAHA
     }
 
