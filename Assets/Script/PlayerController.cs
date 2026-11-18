@@ -12,8 +12,8 @@ public class Player : MonoBehaviour
 
     [Header("Modifier")]
     [SerializeField] float JumpStrength = 1;
-    [SerializeField] float LeftMovementAmount = 1;
-    [SerializeField] float RightMovementAmount = 1;
+    [SerializeField] float LeftMovementAmount = 5;
+    [SerializeField] float RightMovementAmount = 5;
 
     //[Header("Jump")]
     //[SerializeField] private LayerMask jumpableGround;
